@@ -14,6 +14,21 @@ The website runs at `http://localhost:5173`. Telegram links point to [@CivicS123
 
 Run the backend separately using [backend/README.md](backend/README.md). Backend secrets belong in `backend/.env`.
 
+## Business Coach
+
+Open `/business-coach` to get a personalized plan for sales, marketing, customer
+retention, and operations. The form collects business context, customers, goals,
+current channels, and an optional monthly budget. Gemini returns a quick win,
+growth recommendations, a four-week action plan, and an editable marketing draft.
+Plans can be downloaded as text.
+
+Use the [Business Coach setup](backend/README.md#business-coach-only-quick-local-setup)
+to install the lightweight backend and add a Google AI Studio key to
+`backend/.env`. Telegram and the grant database are optional for this feature.
+The API key stays on the server. Vite proxies `/api` in development; the existing
+Vercel configuration routes it in production. Free-tier model availability and
+quotas are controlled by Google; see the backend guide for details.
+
 ## Development
 
 ```bash

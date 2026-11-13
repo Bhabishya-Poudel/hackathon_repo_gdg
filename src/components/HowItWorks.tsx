@@ -1,55 +1,27 @@
-import type { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import Reveal from './Reveal';
 import styles from './HowItWorks.module.css';
 
-interface Step {
-  title: string;
-  body: string;
-  icon: ReactNode;
-}
-
-const iconProps = {
-  width: 30,
-  height: 30,
-  viewBox: '0 0 24 24',
-  fill: 'none',
-  stroke: 'currentColor',
-  strokeWidth: 1.6,
-  strokeLinecap: 'round' as const,
-  strokeLinejoin: 'round' as const,
-};
-
-const steps: Step[] = [
+const paths = [
   {
-    title: '1. Open Telegram',
-    body: 'Start a chat with CivicText’s bot. No SMS signup or website account is needed.',
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l2-4.6A8.4 8.4 0 1 1 21 11.5z" />
-        <path d="M8 10h8M8 13h5" />
-      </svg>
-    ),
+    title: 'Find grants',
+    description: 'Look for funding through our Telegram grant finder.',
+    steps: [
+      { title: 'Describe your funding need', body: 'Open the Telegram bot and share what your business or project does, where you are, and what you need funding for.' },
+      { title: 'Explore available matches', body: 'The bot searches its grant catalog and shares available programs, amounts, deadlines, and eligibility details.' },
+      { title: 'Review and apply', body: 'Follow the application links and confirm requirements with the funder. The catalog is in development and may include samples.' },
+    ],
+    href: '/demo', action: 'Start finding grants',
   },
   {
-    title: '2. Describe your project',
-    body: 'Share what your business or community project does and what funding you need.',
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <circle cx="12" cy="12" r="9" />
-        <circle cx="12" cy="10" r="3" />
-        <path d="M6.5 18.5a6.5 6.5 0 0 1 11 0" />
-      </svg>
-    ),
-  },
-  {
-    title: '3. Get grant details',
-    body: 'The bot searches its current catalog and replies with available matches and application links.',
-    icon: (
-      <svg {...iconProps} aria-hidden="true">
-        <rect x="7" y="2.5" width="10" height="19" rx="2" />
-        <path d="M11 18h2" />
-      </svg>
-    ),
+    title: 'Improve your business',
+    description: 'Build a practical improvement plan here on the website.',
+    steps: [
+      { title: 'Tell us about your business', body: 'Share what you offer, who your customers are, and what is getting in the way.' },
+      { title: 'Choose your priority', body: 'Pick a goal for sales, marketing, customer retention, or operations and share your budget.' },
+      { title: 'Try your next steps', body: 'Get a quick win, a 30-day action plan, and a marketing draft. Review and adapt the AI suggestions to your business.' },
+    ],
+    href: '/business-coach', action: 'Get business improvement ideas',
   },
 ];
 
@@ -57,18 +29,8 @@ export default function HowItWorks() {
   return (
     <section className={styles.section} id="how-it-works">
       <div className="container">
-        <Reveal>
-          <h2 className={styles.heading}>How It Works</h2>
-        </Reveal>
-        <ol className={styles.steps}>
-          {steps.map((s, i) => (
-            <Reveal as="li" key={s.title} className={styles.step} delay={i * 120}>
-              <span className={styles.icon}>{s.icon}</span>
-              <h3 className={styles.stepTitle}>{s.title}</h3>
-              <p className={styles.stepBody}>{s.body}</p>
-            </Reveal>
-          ))}
-        </ol>
+        <Reveal><p className={styles.eyebrow}>Funding and practical next steps</p><h2 className={styles.heading}>Two ways to move forward.</h2><p className={styles.intro}>Find opportunities to fund your work, or explore ways to improve it.</p></Reveal>
+        <div className={styles.paths}>{paths.map((path) => <Reveal key={path.href} className={styles.path}><h3>{path.title}</h3><p className={styles.pathDescription}>{path.description}</p><ol className={styles.pathSteps}>{path.steps.map((step) => <li key={step.title}><h4>{step.title}</h4><p>{step.body}</p></li>)}</ol><Link className={styles.pathAction} to={path.href}>{path.action} <span aria-hidden="true">→</span></Link></Reveal>)}</div>
       </div>
     </section>
   );

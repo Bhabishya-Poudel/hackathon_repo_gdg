@@ -8,6 +8,7 @@ import Grants from './pages/Grants';
 import Stories from './pages/Stories';
 import Demo from './pages/Demo';
 import Dashboard from './pages/Dashboard';
+import BusinessCoach from './pages/BusinessCoach';
 import NotFound from './pages/NotFound';
 import styles from './App.module.css';
 
@@ -25,6 +26,7 @@ export default function App() {
               <Route path="/stories" element={<Stories />} />
               <Route path="/demo" element={<Demo />} />
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/business-coach" element={<BusinessCoach />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </PageTransition>

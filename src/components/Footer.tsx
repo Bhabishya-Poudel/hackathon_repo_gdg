@@ -8,11 +8,11 @@ export default function Footer() {
       <div className={`container ${styles.inner}`}>
         <span className={styles.brand}>CivicText</span>
         <p className={styles.note}>
-          &copy; {currentYear} CivicText. Built for organizers, by
-          organizers.
+          &copy; {currentYear} CivicText. Find funding. Build a stronger business.
         </p>
         <nav className={styles.links} aria-label="Footer">
           <a href="/grants">Grants</a>
+          <a href="/business-coach">Business Coach</a>
           <a href="/stories">Stories</a>
           <a href="mailto:hello@civictext.org">Contact</a>
         </nav>

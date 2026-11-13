@@ -1,18 +1,16 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { getTelegramBotUrl } from '../lib/platform';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 const links = [
-  { label: 'How it Works', href: '/#how-it-works' },
-  { label: 'Grants Database', href: '/grants' },
+  { label: 'Find Grants', href: '/demo' },
+  { label: 'Business Coach', href: '/business-coach' },
   { label: 'Stories', href: '/stories' },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(() => window.scrollY > 8);
-  const botUrl = getTelegramBotUrl();
   const close = () => setOpen(false);
 
   // Deepen the header shadow once the page starts scrolling under it.
@@ -47,13 +45,12 @@ export default function Navbar() {
           aria-label="Primary"
         >
           {links.map((l) => (
-            <a key={l.href} href={l.href} className={styles.link} onClick={close}>
+            <NavLink key={l.href} to={l.href} className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`} onClick={close}>
               {l.label}
-            </a>
+            </NavLink>
           ))}
-          <a className={styles.cta} href={botUrl} target="_blank" rel="noopener noreferrer" onClick={close}>
-            Open Telegram
-          </a>
+          <a href="/#how-it-works" className={styles.link} onClick={close}>How it works</a>
+          <Link className={styles.cta} to="/demo" onClick={close}>Find grants <span aria-hidden="true">&rarr;</span></Link>
         </nav>
       </div>
     </header>

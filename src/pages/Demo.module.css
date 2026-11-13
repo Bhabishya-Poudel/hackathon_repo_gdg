@@ -158,6 +158,11 @@
   text-decoration: underline;
 }
 
+.coachCallout { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: center; padding: 24px; background: var(--sage); border: 1px solid #cfdbbf; border-radius: 14px; margin-top: 32px; }
+.coachCallout h2 { font-size: 1.3rem; }
+.coachCallout p { font-size: .85rem; color: var(--ink-soft); margin-top: 8px; max-width: 54ch; }
+.coachCallout a { font-size: .83rem; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+
 @media (max-width: 700px) {
   .intro {
     grid-template-columns: minmax(0, 1fr);
