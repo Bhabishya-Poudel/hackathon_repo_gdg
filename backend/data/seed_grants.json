@@ -1,0 +1,702 @@
+[
+  {
+    "external_id": "garden-center-microgrant",
+    "title": "Green Thumb Small Business Microgrant (sample)",
+    "funder": "Sample Community Foundation",
+    "description": "Inventory, pots, planters, soil and greenhouse equipment for Black-owned nurseries, flower shops and garden-supply businesses.",
+    "amount_min": 1000,
+    "amount_max": 7500,
+    "deadline": null,
+    "url": "https://example.org/green-thumb",
+    "eligibility": "Black-owned for-profit businesses with fewer than 10 employees.",
+    "categories": [
+      "small-business",
+      "environment"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "sba-step",
+    "title": "SBA State Trade Expansion Program (STEP) export grants",
+    "funder": "U.S. Small Business Administration, via your state's trade office",
+    "description": "Federal money passed to state agencies, which reimburse established small businesses for export costs: trade shows and trade missions, translation, international marketing and website globalization, export training and consulting. Apply through your state's STEP office, not SBA directly.",
+    "amount_min": null,
+    "amount_max": null,
+    "deadline": null,
+    "url": "https://www.sba.gov/loans/additional-funding-opportunities/grants/",
+    "eligibility": "Established U.S. small businesses that want to start or grow exporting. Contact your state or territory STEP director.",
+    "categories": [
+      "small-business",
+      "export"
+    ],
+    "states": [
+      "AK",
+      "AL",
+      "AR",
+      "AZ",
+      "CA",
+      "CO",
+      "CT",
+      "FL",
+      "GA",
+      "HI",
+      "IA",
+      "ID",
+      "IL",
+      "IN",
+      "KS",
+      "KY",
+      "LA",
+      "MA",
+      "MD",
+      "ME",
+      "MI",
+      "MO",
+      "MS",
+      "MT",
+      "NC",
+      "ND",
+      "NH",
+      "NJ",
+      "NM",
+      "NY",
+      "OH",
+      "OK",
+      "OR",
+      "PA",
+      "RI",
+      "SC",
+      "SD",
+      "TN",
+      "TX",
+      "UT",
+      "VA",
+      "VT",
+      "WA",
+      "WI",
+      "WV",
+      "WY"
+    ]
+  },
+  {
+    "external_id": "food-truck-launch",
+    "title": "Mobile Food Vendor Launch Grant (sample)",
+    "funder": "Sample Street Food Alliance",
+    "description": "Helps new food truck, food cart and pop-up vendors pay for equipment, permits, a commercial kitchen rental and the first month of inventory.",
+    "amount_min": 2000,
+    "amount_max": 10000,
+    "deadline": "2027-03-31",
+    "url": "https://example.org/food-truck-launch",
+    "eligibility": "Food truck and cart owners in business less than 2 years.",
+    "categories": [
+      "small-business",
+      "food"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "home-bakery-equipment",
+    "title": "Home Bakery Equipment Grant (sample)",
+    "funder": "Sample Women's Business Fund",
+    "description": "Ovens, mixers, display cases and packaging for home bakeries and cottage food businesses, with priority for women-led businesses.",
+    "amount_min": 500,
+    "amount_max": 5000,
+    "deadline": null,
+    "url": "https://example.org/home-bakery-equipment",
+    "eligibility": "Women-led bakeries and cottage food businesses with under 5 employees.",
+    "categories": [
+      "small-business",
+      "food"
+    ],
+    "states": [
+      "GA",
+      "FL",
+      "AL"
+    ]
+  },
+  {
+    "external_id": "youth-sports-gear",
+    "title": "Youth Sports Equipment Fund (sample)",
+    "funder": "Sample Community Sports Foundation",
+    "description": "Pays for jerseys, balls, nets, uniforms and field rental for youth basketball, soccer, baseball and other sports leagues, camps and clinics.",
+    "amount_min": 500,
+    "amount_max": 5000,
+    "deadline": "2027-01-31",
+    "url": "https://example.org/youth-sports-gear",
+    "eligibility": "Nonprofits, schools and community groups serving young people under 18.",
+    "categories": [
+      "youth",
+      "sports"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "black-owned-salon",
+    "title": "Beauty and Barber Business Expansion Grant (sample)",
+    "funder": "Sample Black Business Collective",
+    "description": "Funds chairs, salon equipment, product inventory, a second location and licensing for hair salons, barbershops and beauty businesses owned by Black entrepreneurs.",
+    "amount_min": 2500,
+    "amount_max": 15000,
+    "deadline": "2027-04-15",
+    "url": "https://example.org/black-owned-salon",
+    "eligibility": "Black-owned beauty and personal care businesses.",
+    "categories": [
+      "small-business",
+      "beauty"
+    ],
+    "states": [
+      "MI",
+      "IL",
+      "OH"
+    ]
+  },
+  {
+    "external_id": "veteran-small-biz",
+    "title": "Veteran Business Growth Grant (sample)",
+    "funder": "Sample Veterans Entrepreneur Network",
+    "description": "Working capital, tools, vehicles and equipment for landscaping, trades, retail and service businesses owned by military veterans.",
+    "amount_min": 1000,
+    "amount_max": 10000,
+    "deadline": null,
+    "url": "https://example.org/veteran-small-biz",
+    "eligibility": "Veteran-owned small businesses, including spouses of service members.",
+    "categories": [
+      "small-business",
+      "veterans"
+    ],
+    "states": [
+      "OH",
+      "PA",
+      "NY"
+    ]
+  },
+  {
+    "external_id": "faith-food-pantry",
+    "title": "Faith Community Food Pantry Grant (sample)",
+    "funder": "Sample Hunger Relief Trust",
+    "description": "Refrigerators, shelving, food purchases and volunteer training for church, mosque, temple and other faith-based food pantries and meal programs.",
+    "amount_min": 1000,
+    "amount_max": 8000,
+    "deadline": "2027-02-28",
+    "url": "https://example.org/faith-food-pantry",
+    "eligibility": "Faith-based nonprofits running food pantries or free meal programs.",
+    "categories": [
+      "food-security",
+      "nonprofit"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "rural-farm-micro",
+    "title": "Rural Farm Microgrant (sample)",
+    "funder": "Sample Rural Development Fund",
+    "description": "Seeds, tools, irrigation, a small greenhouse or hoop house, and market stall costs for small farms and market gardens in rural areas.",
+    "amount_min": 1000,
+    "amount_max": 6000,
+    "deadline": "2027-05-01",
+    "url": "https://example.org/rural-farm-micro",
+    "eligibility": "Farmers and growers in rural communities with under 50 acres.",
+    "categories": [
+      "agriculture",
+      "small-business"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "immigrant-entrepreneur",
+    "title": "Immigrant Entrepreneur Startup Grant (sample)",
+    "funder": "Sample New Americans Fund",
+    "description": "Startup costs, translation, legal fees and licensing for restaurants, shops and service businesses led by immigrants and refugees.",
+    "amount_min": 2000,
+    "amount_max": 12000,
+    "deadline": null,
+    "url": "https://example.org/immigrant-entrepreneur",
+    "eligibility": "Immigrant- or refugee-led businesses, first-time owners welcome.",
+    "categories": [
+      "small-business",
+      "immigrant"
+    ],
+    "states": [
+      "NY",
+      "CA",
+      "TX"
+    ]
+  },
+  {
+    "external_id": "first-time-founder",
+    "title": "First-Time Founder Startup Grant (sample)",
+    "funder": "Sample Startup Access Foundation",
+    "description": "General startup money for first-time business owners: inventory, tools, a website, insurance and the first months of rent.",
+    "amount_min": 1000,
+    "amount_max": 5000,
+    "deadline": "2027-06-30",
+    "url": "https://example.org/first-time-founder",
+    "eligibility": "People starting their first business, any industry, pre-revenue to 12 months in business.",
+    "categories": [
+      "small-business",
+      "startup"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "small-biz-digital",
+    "title": "Small Business Website and Marketing Grant (sample)",
+    "funder": "Sample Main Street Digital Program",
+    "description": "Pays for a business website, online store setup, photography, social media advertising and a point-of-sale system for small shops and service providers.",
+    "amount_min": 500,
+    "amount_max": 3000,
+    "deadline": null,
+    "url": "https://example.org/small-biz-digital",
+    "eligibility": "Small businesses with under 10 employees and no current online store.",
+    "categories": [
+      "small-business",
+      "technology"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "artist-studio",
+    "title": "Community Artist Studio Grant (sample)",
+    "funder": "Sample Arts Council",
+    "description": "Supplies, studio rent, a kiln or printing press, and exhibition costs for working artists, makers and craftspeople.",
+    "amount_min": 1000,
+    "amount_max": 7500,
+    "deadline": "2027-03-01",
+    "url": "https://example.org/artist-studio",
+    "eligibility": "Individual artists and makers, including LGBTQ+-led collectives.",
+    "categories": [
+      "arts",
+      "small-business"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "catering-meal-prep",
+    "title": "Restaurant, Catering and Meal Prep Startup Grant (sample)",
+    "funder": "Sample Culinary Entrepreneurs Fund",
+    "description": "Commercial kitchen rental, ovens, chafing dishes, refrigeration, delivery vans, permits and food-safety certification for restaurants, caterers, meal prep and home-based cooks selling lasagna, tamales, soul food and other prepared dishes.",
+    "amount_min": 2000,
+    "amount_max": 15000,
+    "deadline": "2027-04-30",
+    "url": "https://example.org/catering-meal-prep",
+    "eligibility": "Restaurant, catering and prepared-food businesses with under 15 employees.",
+    "categories": [
+      "small-business",
+      "food"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "latino-business",
+    "title": "Latino Business Owners Growth Grant (sample)",
+    "funder": "Sample Hispanic Chamber Foundation",
+    "description": "Inventory, equipment, bilingual marketing and licensing for Latino, Latina, Latinx and Hispanic-owned small businesses in food, beauty, retail, crafts and services.",
+    "amount_min": 1500,
+    "amount_max": 10000,
+    "deadline": "2027-03-15",
+    "url": "https://example.org/latino-business",
+    "eligibility": "Latino, Latina, Latinx and Hispanic-owned small businesses.",
+    "categories": [
+      "small-business",
+      "latino"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "asian-american-biz",
+    "title": "Asian American Small Business Grant (sample)",
+    "funder": "Sample AAPI Business Association",
+    "description": "Equipment, storefront improvements, translation and marketing for Asian American and Pacific Islander owned businesses such as nail salons, grocery stores, restaurants and shops.",
+    "amount_min": 2000,
+    "amount_max": 12000,
+    "deadline": null,
+    "url": "https://example.org/asian-american-biz",
+    "eligibility": "Asian American and Pacific Islander (AAPI) owned small businesses.",
+    "categories": [
+      "small-business",
+      "asian"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "native-entrepreneur",
+    "title": "Native Entrepreneur Grant (sample)",
+    "funder": "Sample Tribal Economic Development Fund",
+    "description": "Supplies, equipment, tourism startup costs and market booth fees for Native American, American Indian and Alaska Native entrepreneurs, including beadwork, crafts, art and cultural tourism.",
+    "amount_min": 1000,
+    "amount_max": 10000,
+    "deadline": "2027-05-15",
+    "url": "https://example.org/native-entrepreneur",
+    "eligibility": "Enrolled tribal members and Native-owned businesses.",
+    "categories": [
+      "small-business",
+      "native"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "disability-entrepreneur",
+    "title": "Entrepreneurs with Disabilities Grant (sample)",
+    "funder": "Sample Abilities Business Network",
+    "description": "Adaptive equipment, accessible workspace changes, assistive technology and startup costs for business owners who are disabled or deaf.",
+    "amount_min": 1000,
+    "amount_max": 8000,
+    "deadline": null,
+    "url": "https://example.org/disability-entrepreneur",
+    "eligibility": "Business owners with a disability, including deaf and blind entrepreneurs.",
+    "categories": [
+      "small-business",
+      "disability"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "home-childcare",
+    "title": "Home Childcare Provider Startup Grant (sample)",
+    "funder": "Sample Early Learning Fund",
+    "description": "Licensing fees, safety upgrades, cribs, play equipment, curriculum and background checks for home daycare and child care centers.",
+    "amount_min": 1000,
+    "amount_max": 7000,
+    "deadline": "2027-02-15",
+    "url": "https://example.org/home-childcare",
+    "eligibility": "New or small licensed child care and daycare providers.",
+    "categories": [
+      "childcare",
+      "small-business"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "trades-transport",
+    "title": "Trades and Transportation Equipment Grant (sample)",
+    "funder": "Sample Working Families Fund",
+    "description": "Trucks, vans, trailers, tools and equipment for plumbers, electricians, HVAC, auto repair and car detailing, house cleaning, moving, landscaping, lawn care and owner-operator trucking businesses.",
+    "amount_min": 2000,
+    "amount_max": 12000,
+    "deadline": null,
+    "url": "https://example.org/trades-transport",
+    "eligibility": "Owner-operators and small trades and service businesses.",
+    "categories": [
+      "small-business",
+      "trades"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "retail-boutique",
+    "title": "Boutique and Craft Vendor Inventory Grant (sample)",
+    "funder": "Sample Main Street Retail Fund",
+    "description": "Opening inventory, racks, displays, booth fees and online store setup for clothing and shoe boutiques, bookstores, gift shops, jewelry makers and craft fair and market vendors.",
+    "amount_min": 1000,
+    "amount_max": 8000,
+    "deadline": null,
+    "url": "https://example.org/retail-boutique",
+    "eligibility": "Retail shops and handmade-goods sellers, online or in person.",
+    "categories": [
+      "small-business",
+      "retail"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "urban-farm-market",
+    "title": "Urban Farm and Farmers Market Vendor Grant (sample)",
+    "funder": "Sample Local Food Fund",
+    "description": "Seeds, raised beds, coolers, market stalls, produce stands and community garden costs for urban farms, farmers market vendors and food growers.",
+    "amount_min": 500,
+    "amount_max": 5000,
+    "deadline": "2027-04-01",
+    "url": "https://example.org/urban-farm-market",
+    "eligibility": "Urban growers and farmers market vendors.",
+    "categories": [
+      "agriculture",
+      "food"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "tutoring-afterschool",
+    "title": "Tutoring and After-School Program Grant (sample)",
+    "funder": "Sample Education Access Fund",
+    "description": "Curriculum, laptops, space rental and supplies for tutoring businesses and after-school programs serving students.",
+    "amount_min": 1000,
+    "amount_max": 6000,
+    "deadline": "2027-03-31",
+    "url": "https://example.org/tutoring-afterschool",
+    "eligibility": "Tutoring businesses, nonprofits and community programs serving youth.",
+    "categories": [
+      "education",
+      "youth"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "creative-entrepreneur",
+    "title": "Creative Entrepreneur Equipment Grant (sample)",
+    "funder": "Sample Makers Collective",
+    "description": "Cameras, lighting, audio equipment, software and studio time for photographers, videographers, musicians, music producers, DJs and graphic designers.",
+    "amount_min": 1000,
+    "amount_max": 6000,
+    "deadline": null,
+    "url": "https://example.org/creative-entrepreneur",
+    "eligibility": "Independent creatives earning income from their work.",
+    "categories": [
+      "arts",
+      "small-business"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "wellness-homecare",
+    "title": "Wellness and Home Care Business Grant (sample)",
+    "funder": "Sample Community Health Fund",
+    "description": "Licensing, insurance, equipment and marketing for yoga and fitness studios, massage therapists, home health aides and mental health practices.",
+    "amount_min": 1500,
+    "amount_max": 9000,
+    "deadline": "2027-06-01",
+    "url": "https://example.org/wellness-homecare",
+    "eligibility": "Wellness, fitness and home care practitioners starting or growing a practice.",
+    "categories": [
+      "health",
+      "small-business"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "women-entrepreneur",
+    "title": "Women Entrepreneur Seed Grant (sample)",
+    "funder": "Sample Women's Enterprise Center",
+    "description": "Seed money for women-owned businesses in any industry: equipment, inventory, a website, training and business coaching.",
+    "amount_min": 2000,
+    "amount_max": 10000,
+    "deadline": "2027-05-31",
+    "url": "https://example.org/women-entrepreneur",
+    "eligibility": "Businesses at least 51% owned by women.",
+    "categories": [
+      "small-business",
+      "women"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "lgbtq-business",
+    "title": "LGBTQ+ Owned Business Grant (sample)",
+    "funder": "Sample Pride Business Alliance",
+    "description": "Startup and growth funding for LGBTQ+-owned businesses such as cafes, coffee shops, boutiques and service companies.",
+    "amount_min": 2000,
+    "amount_max": 10000,
+    "deadline": "2027-06-15",
+    "url": "https://example.org/lgbtq-business",
+    "eligibility": "LGBTQ+-owned small businesses.",
+    "categories": [
+      "small-business",
+      "lgbtq"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "young-entrepreneur",
+    "title": "Young Entrepreneur Grant (sample)",
+    "funder": "Sample Next Generation Fund",
+    "description": "First-business funding for entrepreneurs aged 16 to 25: tools, mowers, equipment, inventory and a website for student and teen businesses.",
+    "amount_min": 250,
+    "amount_max": 2500,
+    "deadline": null,
+    "url": "https://example.org/young-entrepreneur",
+    "eligibility": "Entrepreneurs aged 16 to 25.",
+    "categories": [
+      "small-business",
+      "youth"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "second-chance",
+    "title": "Second Chance Entrepreneur Grant (sample)",
+    "funder": "Sample Reentry Business Network",
+    "description": "Startup money, tools and licensing for founders who were formerly incarcerated: moving companies, cleaning, food, trades and retail.",
+    "amount_min": 1000,
+    "amount_max": 7500,
+    "deadline": null,
+    "url": "https://example.org/second-chance",
+    "eligibility": "Business owners with a past conviction or incarceration.",
+    "categories": [
+      "small-business",
+      "reentry"
+    ],
+    "states": []
+  },
+  {
+    "external_id": "dc-microgrant",
+    "title": "DC Small Business Microgrant (sample)",
+    "funder": "Sample DC Business Office",
+    "description": "Working capital, technology, equipment and marketing for small businesses and startups located in Washington, DC.",
+    "amount_min": 1000,
+    "amount_max": 10000,
+    "deadline": "2027-02-01",
+    "url": "https://example.org/dc-microgrant",
+    "eligibility": "Businesses located in the District of Columbia.",
+    "categories": [
+      "small-business"
+    ],
+    "states": [
+      "DC"
+    ]
+  },
+  {
+    "external_id": "galaxy-grants",
+    "title": "Galaxy Grants",
+    "funder": "Galaxy of Stars (Hidden Star Resources)",
+    "description": "Cash grant for women and minority business owners, whether new, experienced or aspiring. Free to apply. Winners are announced the week after the deadline.",
+    "amount_min": 2500,
+    "amount_max": 2500,
+    "deadline": "2026-10-31",
+    "url": "https://galaxyofstars.org/galaxy-grants/",
+    "eligibility": "Women and minority business owners, whether new, experienced or aspiring. No state or residency rule was found on the page.",
+    "categories": [
+      "small-business",
+      "women",
+      "minority"
+    ],
+    "states": [],
+    "status": "open"
+  },
+  {
+    "external_id": "freed-fellowship",
+    "title": "Freed Fellowship",
+    "funder": "Freed Fellowship",
+    "description": "A $500 no-strings-attached grant to one micro or small business owner each month. Every Fellow is also considered for a $2,500 year-end grant. Applications are rolling; to be considered for a month, apply by midnight Eastern on its last day.",
+    "amount_min": 500,
+    "amount_max": 2500,
+    "deadline": null,
+    "url": "https://freedfellowship.com/",
+    "eligibility": "Any micro or small business owner in the US. Nonprofits are not supported. Application fee: $19.",
+    "categories": [
+      "small-business"
+    ],
+    "states": [],
+    "status": "open"
+  },
+  {
+    "external_id": "secretsos-small-business",
+    "title": "Secretsos Small Business Grant",
+    "funder": "Secretsos Foundation",
+    "description": "A $2,500 grant to accelerate a small business owner's success. Applications open at the start of each quarter and close at its end (Q4 is October 1 to December 31). One winner is announced after each window.",
+    "amount_min": 2500,
+    "amount_max": 2500,
+    "deadline": null,
+    "url": "https://secretsos.com/grants/",
+    "eligibility": "Age 21 or older with an active, registered business operating in a US state or territory. Application fee: $15.",
+    "categories": [
+      "small-business"
+    ],
+    "states": [],
+    "status": "open"
+  },
+  {
+    "external_id": "nourishmd-maryland",
+    "title": "NourishMD Grant Program",
+    "funder": "Maryland Department of Housing and Community Development",
+    "description": "Capital grants for food retailers: equipment, renovations, inventory expansion, working capital, SNAP/EBT technology, a delivery vehicle, and solar or heat pump installations. Two tiers: the Tier 1 portal closes November 2, 2026 at 5:00 p.m. EST and Tier 2 closes February 4, 2027.",
+    "amount_min": 25000,
+    "amount_max": 150000,
+    "deadline": "2026-11-02",
+    "url": "https://dhcd.maryland.gov/business-development/nourishmd-grant-program",
+    "eligibility": "For-profit or nonprofit food retailers serving a community with a Maryland Community Compass Fresh Food Gap Score of 65% or higher.",
+    "categories": [
+      "food",
+      "food-retail",
+      "grocery",
+      "corner-store",
+      "small-business"
+    ],
+    "states": [
+      "MD"
+    ],
+    "status": "open"
+  },
+  {
+    "external_id": "preserve-route-66",
+    "title": "Preserve Route 66 Legacy Business Grant Fund",
+    "funder": "National Trust for Historic Preservation",
+    "description": "Grants for Route 66 legacy businesses for capital improvements, planning, and marketing and outreach. Amounts generally range from $5,000 to $10,000 and no match is required. Applications open September 1, 2026 and are due November 12, 2026 at 11:59 pm local time.",
+    "amount_min": 5000,
+    "amount_max": 10000,
+    "deadline": "2026-11-12",
+    "url": "https://savingplaces.org/preserve-route-66-legacy-business-grant-fund",
+    "eligibility": "Owner (age 18 or older) of a legacy business in a community along Route 66 in Illinois, Missouri, Kansas, Oklahoma, Texas, New Mexico, Arizona or California. Not part of a national franchise. Digital-only businesses are not eligible.",
+    "categories": [
+      "small-business",
+      "historic-preservation"
+    ],
+    "states": [
+      "IL",
+      "MO",
+      "KS",
+      "OK",
+      "TX",
+      "NM",
+      "AZ",
+      "CA"
+    ],
+    "status": "open"
+  },
+  {
+    "external_id": "mn-agri-livestock",
+    "title": "AGRI Livestock Investment Grant",
+    "funder": "Minnesota Department of Agriculture",
+    "description": "Reimburses 50% of the first $20,000 of eligible expenses and 25% of additional eligible costs, up to a $25,000 maximum, for Minnesota livestock operations. Applications are due by 4 p.m. Central Time on November 17, 2026.",
+    "amount_min": 400,
+    "amount_max": 25000,
+    "deadline": "2026-11-17",
+    "url": "https://www.mda.state.mn.us/business-dev-loans-grants/agri-livestock-investment-grant",
+    "eligibility": "Minnesota resident, business entity authorized to farm in Minnesota, or Tribal government; the principal operator of a Minnesota livestock operation with at least $1,000 in annual livestock product sales.",
+    "categories": [
+      "agriculture",
+      "livestock",
+      "cattle"
+    ],
+    "states": [
+      "MN"
+    ],
+    "status": "open"
+  },
+  {
+    "external_id": "prosper-portland-pip",
+    "title": "Prosperity Investment Program (Prosper Portland)",
+    "funder": "Prosper Portland",
+    "description": "Funds up to 75 percent of approved hard and soft costs for storefront, tenant and building improvements; the applicant covers the other 25 percent. Funds are subject to budget availability and there is no stated deadline.",
+    "amount_min": null,
+    "amount_max": 75000,
+    "deadline": null,
+    "url": "https://prosperportland.us/our-work/prosperity-investment-program-pip/",
+    "eligibility": "Business owners and property owners in an eligible Portland TIF district (Central Eastside, Cully, Gateway, Interstate Corridor, Lents Town Center, Old Town, North Macadam) with at least three years left on their lease. Not eligible: national franchises, nonprofits (except in Old Town), work done before a grant agreement. The Central Eastside Corridor cap is $25,000 and soft costs are capped at $25,000.",
+    "categories": [
+      "small-business",
+      "storefront"
+    ],
+    "states": [
+      "OR"
+    ],
+    "status": "open"
+  },
+  {
+    "external_id": "seattle-restored-popup",
+    "title": "Seattle Restored Pop-Up Program",
+    "funder": "Seattle Restored",
+    "description": "Selected small businesses get a no-cost six-month pop-up storefront and a $2,500 participation stipend. 2027 pop-up applications open October 28, 2026 and close November 24, 2026.",
+    "amount_min": 2500,
+    "amount_max": 2500,
+    "deadline": "2026-11-24",
+    "url": "https://seattlerestored.org/participate/apply/",
+    "eligibility": "For-profit businesses with no more than one operating business location. Nonprofits and fiscally sponsored groups are not eligible.",
+    "categories": [
+      "small-business",
+      "retail"
+    ],
+    "states": [
+      "WA"
+    ],
+    "status": "forecasted"
+  }
+]

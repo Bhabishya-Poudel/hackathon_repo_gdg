@@ -1,0 +1,150 @@
+.panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.reset {
+  background: none;
+  border: 0;
+  color: var(--terracotta);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0;
+}
+
+.reset:hover {
+  text-decoration: underline;
+}
+
+.group {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.group legend {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.help {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: -6px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--cream);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 7px 12px;
+  border-radius: 999px;
+  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.chip:hover {
+  border-color: var(--ink-soft);
+}
+
+.chipOn {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.chipOn::before {
+  content: '\2713';
+  margin-right: 6px;
+  font-size: 0.75rem;
+}
+
+.radios {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.radio input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--terracotta);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.select select {
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.select select:focus {
+  outline: none;
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px rgba(201, 98, 59, 0.18);
+}

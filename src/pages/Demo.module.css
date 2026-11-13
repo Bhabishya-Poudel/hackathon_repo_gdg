@@ -1,0 +1,175 @@
+.section {
+  padding-block: 56px 112px;
+}
+
+.content {
+  max-width: 980px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 330px);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+
+.copy {
+  min-width: 0;
+}
+
+.kicker {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+
+.title {
+  margin-top: 6px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.12;
+}
+
+.lead {
+  margin-top: 16px;
+  max-width: 65ch;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  background: var(--terracotta);
+  color: #fff;
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.action:hover {
+  background: var(--terracotta-dark);
+}
+
+.setup {
+  margin-top: 24px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink-soft);
+}
+
+.setup code {
+  color: var(--ink);
+  font-size: 0.9em;
+}
+
+.qrCard {
+  width: 100%;
+  max-width: 330px;
+  justify-self: end;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 22px 48px -30px rgba(43, 29, 58, 0.45);
+}
+
+.qrImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.qrCaption {
+  display: grid;
+  gap: 3px;
+  padding: 14px 6px 4px;
+  text-align: center;
+}
+
+.qrCaption strong {
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.qrCaption span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.qrLink {
+  justify-self: center;
+  margin-top: 8px;
+  color: var(--terracotta);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.qrLink:hover {
+  text-decoration: underline;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  background: #fff;
+}
+
+.card h2 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.card p {
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.privacy,
+.sampleLink {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.sampleLink a {
+  color: var(--terracotta);
+  font-weight: 600;
+}
+
+.sampleLink a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .qrCard {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
