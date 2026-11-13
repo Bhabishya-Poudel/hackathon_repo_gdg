@@ -1,5 +1,8 @@
 # CivicText
 
+For a plain-language explanation of the project's goals, each feature's steps,
+and how the parts connect, read the [complete project guide](docs/PROJECT_SUMMARY.md).
+
 CivicText helps small-business owners and community organizers discover funding opportunities through Telegram. The project includes a React website and a Python service for grant ingestion, request understanding, and retrieval.
 
 ## Getting started
