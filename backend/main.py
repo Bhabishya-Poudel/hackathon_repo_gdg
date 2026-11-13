@@ -54,12 +54,19 @@ async def _poll_telegram():
     token = os.environ.get("TELEGRAM_TOKEN", "").strip()
 
     # 1. Delete the webhook so Telegram allows Long Polling
-    await run_in_threadpool(
-        requests.get,
-        f"https://api.telegram.org/bot{token}/deleteWebhook",
-        timeout=10
-    )
-    print("✅ Webhook deleted. Switched to Long Polling mode! Listening for messages...")
+    try:
+        res = await run_in_threadpool(
+            requests.get,
+            f"https://api.telegram.org/bot{token}/deleteWebhook",
+            timeout=10
+        )
+    except Exception:
+        log.exception("deleteWebhook failed (cannot reach Telegram?)")
+    else:
+        if res.ok:
+            print("✅ Webhook deleted. Switched to Long Polling mode! Listening for messages...")
+        else:
+            log.error("deleteWebhook rejected: %s %s", res.status_code, res.text[:200])
 
     offset = 0
     while True:
@@ -97,9 +104,15 @@ async def _poll_telegram():
                             await sub.put(dashboard_update)
 
                         # Process via AI
+                        log.warning("Telegram message from %s: %r", chat_id, user_text[:80])
                         await run_in_threadpool(handle_message, chat_id, user_text)
+            else:
+                # e.g. 401 = bad/revoked token, 409 = another process is polling this bot
+                log.error("getUpdates failed: %s %s", res.status_code, res.text[:200])
+        except asyncio.CancelledError:
+            raise
         except Exception:
-            pass # Ignore temporary network blips
+            log.exception("Telegram polling error")
 
         await asyncio.sleep(1)
 

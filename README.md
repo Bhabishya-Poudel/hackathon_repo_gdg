@@ -13,7 +13,7 @@ cp .env.example .env
 npm run dev
 ```
 
-The website runs at `http://localhost:5173`. Telegram links point to [@CivicS123_bot](https://t.me/CivicS123_bot). `VITE_BACKEND_URL` defaults to `http://127.0.0.1:8000` for the local request monitor. Restart Vite after changing configuration.
+The website runs at `http://localhost:5173`. Telegram links point to [@CIVICGRANTFINDERBOT](https://t.me/CIVICGRANTFINDERBOT). `VITE_BACKEND_URL` defaults to `http://127.0.0.1:8000` for the local request monitor. Restart Vite after changing configuration.
 
 Run the backend separately using [backend/README.md](backend/README.md). Backend secrets belong in `backend/.env`.
 
@@ -87,7 +87,7 @@ The root [vercel.json](./vercel.json) configures Vercel as a multi-service
 project: the Vite app is served by the `app` service, `/api/*` requests are
 forwarded to the FastAPI `backend` service, and all other paths go to the app.
 Configure the backend's `TELEGRAM_TOKEN` and LLM settings as Vercel environment
-variables. Website Telegram links point to [@CivicS123_bot](https://t.me/CivicS123_bot).
+variables. Website Telegram links point to [@CIVICGRANTFINDERBOT](https://t.me/CIVICGRANTFINDERBOT).
 
 The Grants page uses bundled sample listings and does not require a hosted
 database or backend connection.
