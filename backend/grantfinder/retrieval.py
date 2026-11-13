@@ -120,7 +120,7 @@ _ELIGIBLE = re.compile(r"business|individual|for[- ]?profit|non-?profit|unrestri
 
 
 def eligible_for_public(r: sqlite3.Row) -> bool:
-    return r["source"] in ("seed", "listing") or bool(_ELIGIBLE.search(r["eligibility"] or ""))
+    return r["source"] in ("seed", "listing", "web") or bool(_ELIGIBLE.search(r["eligibility"] or ""))
 
 
 def hybrid_search(conn: sqlite3.Connection, query: str, want: set[str], k: int = 3, pool: int = 40,

@@ -13,8 +13,10 @@ def main() -> None:
     p = argparse.ArgumentParser(prog="grantfinder")
     sub = p.add_subparsers(dest="cmd", required=True)
     ing = sub.add_parser("ingest")
-    ing.add_argument("--source", choices=["grants.gov-bulk", "grants.gov", "seed", "all"], default="all")
+    ing.add_argument("--source", choices=["grants.gov-bulk", "grants.gov", "seed", "web", "all"], default="all",
+                     help="'web' = Google-grounded web search (needs LLM_API_KEY); not included in 'all'")
     ing.add_argument("--per-query", type=int, default=25)
+    ing.add_argument("--query", action="append", help="web source only: search topic (repeatable)")
     sub.add_parser("index", help="embed new or changed grants locally")
     q = sub.add_parser("ask", help="semantic search over embedded grants")
     q.add_argument("text"); q.add_argument("-k", type=int, default=5); q.add_argument("--state")
@@ -36,6 +38,10 @@ def main() -> None:
 
     conn = db.connect()
     if args.cmd == "ingest":
+        if args.source == "web":
+            from .ingest import web_search  # lazy: pulls in google-genai, only needed here
+            web_search.ingest(args.query, per_query=min(args.per_query, 15))
+            return
         if args.source in ("seed", "all"):
             print("seed:", db.upsert_grants(conn, seed.load_seed()))
         if args.source in ("grants.gov-bulk", "all"):
