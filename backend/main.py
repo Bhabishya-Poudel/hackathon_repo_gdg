@@ -8,20 +8,19 @@ from pathlib import Path
 
 import requests
 from dotenv import load_dotenv
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.concurrency import run_in_threadpool
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
-from grantfinder.answer import process_grant_request  # noqa: E402  (after load_dotenv: it reads the LLM key)
+from grantfinder.answer import process_grant_request  # noqa: E402
 
 log = logging.getLogger("telegram")
 
-TELEGRAM_MAX_CHARS = 4096  # Telegram rejects longer messages
-_seen_updates: deque = deque(maxlen=500)  # Telegram re-sends an update if we answer slowly; reply only once
-
+TELEGRAM_MAX_CHARS = 4096
+_seen_updates: deque = deque(maxlen=500)
 active_subscribers: list[asyncio.Queue] = []
 
 def _send_url() -> str:
@@ -37,7 +36,6 @@ def send_message(chat_id, text: str) -> None:
         log.error("sendMessage failed: %s %s", resp.status_code, resp.text[:200])
 
 def handle_message(chat_id, user_text: str) -> None:
-    """Runs in a worker thread: the grant lookup blocks (LLM call + search), so it must not run on the event loop."""
     try:
         reply_text = process_grant_request(user_text, chat_id)
     except Exception:
@@ -45,11 +43,67 @@ def handle_message(chat_id, user_text: str) -> None:
         reply_text = "Sorry, something went wrong on my side. Please try again in a minute."
     send_message(chat_id, reply_text)
 
+async def _poll_telegram():
+    """Background loop that asks Telegram for new messages without needing webhooks."""
+    token = os.environ.get("TELEGRAM_TOKEN", "").strip()
+    
+    # 1. Delete the webhook so Telegram allows Long Polling
+    await run_in_threadpool(
+        requests.get, 
+        f"https://api.telegram.org/bot{token}/deleteWebhook", 
+        timeout=10
+    )
+    print("✅ Webhook deleted. Switched to Long Polling mode! Listening for messages...")
+    
+    offset = 0
+    while True:
+        try:
+            # 2. Fetch new messages
+            url = f"https://api.telegram.org/bot{token}/getUpdates"
+            res = await run_in_threadpool(
+                requests.get, 
+                url, 
+                params={"offset": offset, "timeout": 2}, 
+                timeout=5
+            )
+            
+            if res.ok:
+                data = res.json()
+                for update in data.get("result", []):
+                    offset = update["update_id"] + 1
+                    
+                    if update["update_id"] in _seen_updates:
+                        continue
+                    _seen_updates.append(update["update_id"])
+                    
+                    message = update.get("message") or {}
+                    if "text" in message:
+                        chat_id = message["chat"]["id"]
+                        user_text = message["text"]
+
+                        # Broadcast to Dashboard
+                        dashboard_update = {
+                            "phone_id": chat_id,
+                            "text": user_text,
+                            "status": "New Request Received"
+                        }
+                        for sub in active_subscribers:
+                            await sub.put(dashboard_update)
+
+                        # Process via AI
+                        await run_in_threadpool(handle_message, chat_id, user_text)
+        except Exception:
+            pass # Ignore temporary network blips
+        
+        await asyncio.sleep(1)
+
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
-    _send_url()  # fail at startup, not on the first user's message, if the token is missing
+    # Start checking Telegram in the background as soon as the server boots
+    asyncio.create_task(_poll_telegram())
+    
     from grantfinder.llm import get_embeddings
-    await run_in_threadpool(get_embeddings)  # loads the local embedding model now so the first message is not slow
+    await run_in_threadpool(get_embeddings)
     yield
 
 app = FastAPI(lifespan=lifespan)
@@ -64,7 +118,7 @@ app.add_middleware(
 
 @app.get("/")
 def home():
-    return {"message": "My server is awake!"}
+    return {"message": "My server is awake and checking Telegram!"}
 
 @app.get("/stream")
 async def stream_dashboard():
@@ -81,31 +135,3 @@ async def stream_dashboard():
             active_subscribers.remove(client_queue)
 
     return StreamingResponse(event_stream(), media_type="text/event-stream")
-
-@app.post("/webhook")
-async def receive_message(request: Request):
-    data = await request.json()
-
-    update_id = data.get("update_id")
-    if update_id is not None:
-        if update_id in _seen_updates:
-            return {"status": "ok"}
-        _seen_updates.append(update_id)
-
-    message = data.get("message") or {}
-    if "text" in message:
-        chat_id = message["chat"]["id"]
-        user_text = message["text"]
-
-        # Publish incoming requests to dashboard subscribers before grant processing.
-        dashboard_update = {
-            "phone_id": chat_id,
-            "text": user_text,
-            "status": "New Request Received"
-        }
-        for sub in active_subscribers:
-            await sub.put(dashboard_update)
-
-        await run_in_threadpool(handle_message, chat_id, user_text)
-
-    return {"status": "ok"}
