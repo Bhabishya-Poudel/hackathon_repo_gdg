@@ -32,11 +32,11 @@ export default function Demo() {
             <img
               className={styles.qrImage}
               src="/civictext-telegram-qr.png"
-              alt="QR code for opening CivicText's @CivicS123_bot on Telegram"
+              alt="QR code for opening @LOCALCIVICGRANTBOT on Telegram"
             />
             <figcaption className={styles.qrCaption}>
               <strong>Scan to open the bot</strong>
-              <span>Find us on Telegram at @CivicS123_bot</span>
+              <span>Find us on Telegram at @LOCALCIVICGRANTBOT</span>
               <a className={styles.qrLink} href={botUrl} target="_blank" rel="noopener noreferrer">
                 Or open the bot on Telegram <span aria-hidden="true">&rarr;</span>
               </a>

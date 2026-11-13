@@ -1,5 +1,5 @@
 export function getTelegramBotUrl(): string {
-  return 'https://t.me/CivicS123_bot';
+  return 'https://t.me/LOCALCIVICGRANTBOT';
 }
 
 export const backendUrl =
