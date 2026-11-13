@@ -1,6 +1,26 @@
 .section {
-  padding-block: 24px 96px;
+  padding-block: 70px;
+  scroll-margin-top: 100px;
 }
+
+.eyebrow { text-align: center; color: var(--terracotta-dark); font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 12px; }
+.intro { text-align: center; color: var(--muted); font-size: .9rem; margin: 14px auto 0; }
+.paths { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 32px; }
+.path { display: flex; flex-direction: column; padding: 30px; background: #fffcf7; border: 1px solid var(--line); border-radius: 16px; }
+.path > h3 { font-size: 1.5rem; }
+.pathDescription { color: var(--muted); font-size: .87rem; margin-top: 10px; }
+.pathSteps { padding-left: 22px; margin: 24px 0; }
+.pathSteps li { padding-left: 6px; margin-bottom: 20px; }
+.pathSteps li::marker { color: var(--terracotta-dark); font-weight: 600; }
+.pathSteps h4 { margin: 0 0 6px; font-size: .9rem; }
+.pathSteps p { color: var(--muted); font-size: .85rem; line-height: 1.75; }
+.pathAction { display: flex; justify-content: space-between; gap: 12px; font-size: .85rem; font-weight: 600; margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); }
+.pathAction:hover { color: var(--terracotta-dark); }
+@media (max-width: 700px) { .paths { grid-template-columns: 1fr; } .path { padding: 24px; } }
+.action { text-align: center; margin-top: 34px; }
+.action a { display: inline-flex; align-items: center; gap: 20px; color: #fff; background: var(--ink); padding: 13px 20px; border-radius: 9px; font-weight: 600; font-size: .85rem; }
+.action a:hover { background: #493258; }
+.action p { color: var(--muted); font-size: .73rem; margin-top: 12px; }
 
 .heading {
   text-align: center;

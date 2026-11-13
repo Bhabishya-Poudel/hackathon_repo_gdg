@@ -7,6 +7,7 @@ import main
 
 @pytest.fixture()
 def bot(monkeypatch):
+    monkeypatch.setenv("TELEGRAM_TOKEN", "test-token")
     sent = []
     monkeypatch.setattr(main, "process_grant_request", lambda text, chat_id: f"reply to {text!r} for {chat_id}")
     monkeypatch.setattr(main, "send_message", lambda chat_id, text: sent.append((chat_id, text)))

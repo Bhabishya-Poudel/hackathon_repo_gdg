@@ -15,12 +15,12 @@ export default function Demo() {
       <div className={`container ${styles.content}`}>
         <div className={styles.intro}>
           <div className={styles.copy}>
-            <p className={styles.kicker}>CivicText on Telegram</p>
-            <h1 className={styles.title}>Tell the bot what your business needs.</h1>
+            <p className={styles.kicker}>Find grants with CivicText</p>
+            <h1 className={styles.title}>Find support for your next step.</h1>
             <p className={styles.lead}>
               Describe your business or community project and what you need funding
-              for. The backend searches its current grant catalog and sends matching
-              grant details back in Telegram.
+              for. CivicText searches its grant catalog and shares available
+              matches and application details in Telegram.
             </p>
 
             <a className={styles.action} href={botUrl} target="_blank" rel="noopener noreferrer">
@@ -69,6 +69,8 @@ export default function Demo() {
           the funder. The backend catalog is still being prepared and may
           include fictional sample grants.
         </p>
+
+        <div className={styles.coachCallout}><div><h2>Need ideas to grow your business?</h2><p>Get practical sales, marketing, and operations advice with a plan for the next 30 days.</p></div><Link to="/business-coach">Meet your Business Coach <span aria-hidden="true">&rarr;</span></Link></div>
 
         <p className={styles.sampleLink}>
           Want to browse the site&rsquo;s separate sample catalog?{' '}

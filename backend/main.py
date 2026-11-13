@@ -3,19 +3,25 @@ import json
 import logging
 import os
 from collections import deque
-from contextlib import asynccontextmanager
+from contextlib import asynccontextmanager, suppress
 from pathlib import Path
 
 import requests
 from dotenv import load_dotenv
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.concurrency import run_in_threadpool
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
-from grantfinder.answer import process_grant_request  # noqa: E402
+from business_advisor import router as advisor_router  # noqa: E402
+
+
+def process_grant_request(user_text, chat_id):
+    # Keep the website API usable without the optional grant/embedding dependencies.
+    from grantfinder.answer import process_grant_request as process
+    return process(user_text, chat_id)
 
 log = logging.getLogger("telegram")
 
@@ -46,36 +52,36 @@ def handle_message(chat_id, user_text: str) -> None:
 async def _poll_telegram():
     """Background loop that asks Telegram for new messages without needing webhooks."""
     token = os.environ.get("TELEGRAM_TOKEN", "").strip()
-    
+
     # 1. Delete the webhook so Telegram allows Long Polling
     await run_in_threadpool(
-        requests.get, 
-        f"https://api.telegram.org/bot{token}/deleteWebhook", 
+        requests.get,
+        f"https://api.telegram.org/bot{token}/deleteWebhook",
         timeout=10
     )
     print("✅ Webhook deleted. Switched to Long Polling mode! Listening for messages...")
-    
+
     offset = 0
     while True:
         try:
             # 2. Fetch new messages
             url = f"https://api.telegram.org/bot{token}/getUpdates"
             res = await run_in_threadpool(
-                requests.get, 
-                url, 
-                params={"offset": offset, "timeout": 2}, 
+                requests.get,
+                url,
+                params={"offset": offset, "timeout": 2},
                 timeout=5
             )
-            
+
             if res.ok:
                 data = res.json()
                 for update in data.get("result", []):
                     offset = update["update_id"] + 1
-                    
+
                     if update["update_id"] in _seen_updates:
                         continue
                     _seen_updates.append(update["update_id"])
-                    
+
                     message = update.get("message") or {}
                     if "text" in message:
                         chat_id = message["chat"]["id"]
@@ -94,19 +100,28 @@ async def _poll_telegram():
                         await run_in_threadpool(handle_message, chat_id, user_text)
         except Exception:
             pass # Ignore temporary network blips
-        
+
         await asyncio.sleep(1)
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
-    # Start checking Telegram in the background as soon as the server boots
-    asyncio.create_task(_poll_telegram())
-    
-    from grantfinder.llm import get_embeddings
-    await run_in_threadpool(get_embeddings)
-    yield
+    polling_task = None
+    if os.environ.get("TELEGRAM_TOKEN", "").strip():
+        from grantfinder.llm import get_embeddings
+        await run_in_threadpool(get_embeddings)
+        polling_task = asyncio.create_task(_poll_telegram())
+    else:
+        log.info("Telegram is disabled; website Business Coach is available independently.")
+    try:
+        yield
+    finally:
+        if polling_task is not None:
+            polling_task.cancel()
+            with suppress(asyncio.CancelledError):
+                await polling_task
 
 app = FastAPI(lifespan=lifespan)
+app.include_router(advisor_router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -135,3 +150,33 @@ async def stream_dashboard():
             active_subscribers.remove(client_queue)
 
     return StreamingResponse(event_stream(), media_type="text/event-stream")
+
+@app.post("/webhook")
+async def receive_message(request: Request):
+    if not os.environ.get("TELEGRAM_TOKEN", "").strip():
+        raise HTTPException(503, "Telegram is not configured.")
+    data = await request.json()
+
+    update_id = data.get("update_id")
+    if update_id is not None:
+        if update_id in _seen_updates:
+            return {"status": "ok"}
+        _seen_updates.append(update_id)
+
+    message = data.get("message") or {}
+    if "text" in message:
+        chat_id = message["chat"]["id"]
+        user_text = message["text"]
+
+        # Publish incoming requests to dashboard subscribers before grant processing.
+        dashboard_update = {
+            "phone_id": chat_id,
+            "text": user_text,
+            "status": "New Request Received"
+        }
+        for sub in active_subscribers:
+            await sub.put(dashboard_update)
+
+        await run_in_threadpool(handle_message, chat_id, user_text)
+
+    return {"status": "ok"}

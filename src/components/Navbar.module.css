@@ -56,7 +56,7 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--ink-soft);
@@ -83,12 +83,14 @@
 }
 
 .link:hover,
-.link:focus-visible {
+.link:focus-visible,
+.active {
   color: var(--ink);
 }
 
 .link:hover::after,
-.link:focus-visible::after {
+.link:focus-visible::after,
+.active::after {
   transform: scaleX(1);
 }
 
@@ -169,7 +171,7 @@
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .menuBtn {
     display: inline-flex;
   }

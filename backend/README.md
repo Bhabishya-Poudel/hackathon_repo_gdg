@@ -4,6 +4,58 @@ Python service for grant ingestion, semantic retrieval, and Telegram responses. 
 
 ## Setup
 
+### Business Coach only (quick local setup)
+
+The website's Business Coach works independently of Telegram, grant ingestion,
+and embedding downloads. From the repository root:
+
+```bash
+python3 -m venv backend/.venv
+backend/.venv/bin/python -m pip install -r backend/requirements-advisor.txt
+cp backend/.env.example backend/.env
+```
+
+Create a key in [Google AI Studio](https://aistudio.google.com/apikey) and set
+`GEMINI_API_KEY` in `backend/.env`. An existing `LLM_API_KEY` also works as a
+fallback. Leave `TELEGRAM_TOKEN` empty for this setup. Never use a `VITE_` prefix
+for the Gemini key: Vite exposes those variables to browsers.
+
+```bash
+cd backend
+.venv/bin/python -m uvicorn main:app --reload --host 127.0.0.1 --port 8000
+```
+
+In another terminal at the repository root, run `npm run dev` and open
+`http://localhost:5173/business-coach`. Vite proxies `/api` to the Python service;
+restart Vite after changing `VITE_BACKEND_URL`. Production Vercel routing already
+forwards `/api/*` to this same service. For another static host, configure an
+equivalent API reverse proxy.
+
+`ADVISOR_MODEL` defaults to `gemini-3.5-flash-lite`, currently listed with free-tier
+input and output. Free-tier eligibility and quotas depend on the project and can
+change; check [pricing](https://aistudio.google.com/docs/pricing#gemini-3.5-flash-lite)
+and [your active limits](https://aistudio.google.com/rate-limit). Use a free-tier
+project to stay within free usage. A billing-enabled project can incur charges
+even with this model; the application cannot force Google's billing tier.
+There are no automatic retries, paid-model fallbacks, grounding tools, or web
+searches. Each click makes one bounded model request. Quota exhaustion returns
+an actionable error. This initial endpoint has no authentication or shared
+rate limiter; add access controls before opening it to unrestricted public use.
+
+Google may use free-tier submissions to improve its products. The form explains
+this before submission; avoid sensitive data. Profiles and plans are not saved
+by this application. Users can download their generated plan as text.
+
+To run the advisor and Telegram transport tests without live API calls:
+
+```bash
+backend/.venv/bin/python -m pip install pytest
+cd backend
+.venv/bin/python -m pytest tests/test_business_advisor.py tests/test_telegram.py -q
+```
+
+### Full grant and Telegram service
+
 Requires Python 3.10+. Run from the repository root:
 
 ```bash
@@ -22,11 +74,13 @@ Set environment values in `backend/.env`, which is excluded from version control
 
 | Variable | Purpose |
 | --- | --- |
+| `GEMINI_API_KEY` | Server-only Business Coach key; falls back to `LLM_API_KEY` |
+| `ADVISOR_MODEL` | Business Coach model, default `gemini-3.5-flash-lite` |
 | `LLM_API_KEY` | Gemini API key for request understanding and chat |
 | `LLM_MODEL` | Optional primary model override |
 | `LLM_FALLBACK_MODELS` | Optional comma-separated fallback models |
 | `LLM_BASE_URL` | Optional provider base URL override |
-| `TELEGRAM_TOKEN` | Bot token required for API startup and Telegram delivery |
+| `TELEGRAM_TOKEN` | Enables the Telegram bot and embedding warmup; optional for Business Coach |
 
 Local embeddings and semantic search do not require an LLM API key. Initial indexing downloads the embedding model and can take several minutes on CPU.
 
@@ -56,11 +110,13 @@ The `understand` and `chat` commands require `LLM_API_KEY`.
 python -m uvicorn main:app --reload
 ```
 
-The service runs at `http://127.0.0.1:8000`. Startup validates the Telegram token and loads the embedding model.
+The service runs at `http://127.0.0.1:8000`. When `TELEGRAM_TOKEN` is set, startup loads the embedding model. With no token, the Business Coach API starts independently and Telegram webhooks return 503.
 
 | Endpoint | Purpose |
 | --- | --- |
 | `GET /` | Service response |
+| `GET /api/advisor/status` | Whether a Gemini key is configured (does not validate credentials) |
+| `POST /api/advisor` | Validated business profile → Gemini growth plan |
 | `POST /webhook` | Telegram text updates |
 | `GET /stream` | Server-sent events for incoming requests |
 

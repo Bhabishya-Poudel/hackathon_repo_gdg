@@ -15,7 +15,7 @@ export const nextId = () => `m${Date.now().toString(36)}${(counter += 1)}`;
 
 export const SUGGESTIONS = [
   'I run a youth mentorship program in Atlanta and need supplies.',
-  'Black-owned barbershop in Birmingham, need about $5,000 for a second chair.',
+  'I own a barbershop in Birmingham and need about $5,000 for a second chair.',
   'Our church in Macon hosts a food pantry and the roof leaks.',
   'Group of doulas in Decatur, not a nonprofit yet, need birth kits.',
 ];

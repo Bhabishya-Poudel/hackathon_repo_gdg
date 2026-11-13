@@ -1,107 +1,36 @@
 import { Link } from 'react-router-dom';
 import styles from './Hero.module.css';
 
-const pillIcon = {
-  width: 14,
-  height: 14,
-  viewBox: '0 0 24 24',
-  fill: 'none',
-  stroke: 'currentColor',
-  strokeWidth: 2,
-  strokeLinecap: 'round' as const,
-  strokeLinejoin: 'round' as const,
-};
-
-const tags = [
-  {
-    label: 'Grassroots-First',
-    tone: styles.tagSage,
-    icon: (
-      <svg {...pillIcon} aria-hidden="true">
-        <path d="M12 21V11" />
-        <path d="M12 11C12 6 8 4 4 4c0 5 3 8 8 7z" />
-        <path d="M12 14c0-4 3-6 8-6 0 4-3 7-8 6z" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Equitable Capital',
-    tone: styles.tagPeach,
-    icon: (
-      <svg {...pillIcon} aria-hidden="true">
-        <rect x="3" y="7" width="18" height="13" rx="2" />
-        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Telegram bot',
-    tone: styles.tagRose,
-    icon: (
-      <svg {...pillIcon} aria-hidden="true">
-        <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l2-4.6A8.4 8.4 0 1 1 21 11.5z" />
-      </svg>
-    ),
-  },
-];
-
 export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={`container ${styles.grid}`}>
         <div className={styles.copy}>
-          <h1 className={styles.title}>
-            <span className={styles.titleLine}>Find grants through</span>{' '}
-            <span className={styles.titleLine}>Telegram.</span>
-          </h1>
-          <p className={styles.lead}>
-            Tell CivicText&rsquo;s Telegram bot about your business or community
-            project. It searches the backend&rsquo;s grant catalog and replies
-            with relevant programs, funding details, and application links.
-          </p>
-
+          <p className={styles.eyebrow}><span aria-hidden="true" /> Grant discovery & business growth</p>
+          <h1 className={styles.title}>Find funding.<br /><span>Grow your business.</span></h1>
+          <p className={styles.lead}>Find grants for your business or community project, and get practical ideas to improve your sales, marketing, and daily operations. Two ways to move your business forward, in one place.</p>
           <div className={styles.actions}>
-            <Link to="/demo" className={styles.primary}>
-              Try the Demo
-            </Link>
-            <Link to="/grants" className={styles.secondary}>
-              Browse sample listings <span aria-hidden="true">&rarr;</span>
-            </Link>
+            <Link to="/demo" className={styles.primary}>Find grants <span aria-hidden="true">&rarr;</span></Link>
+            <Link to="/business-coach" className={`${styles.secondary} ${styles.coachAction}`}>Improve my business <span aria-hidden="true">&rarr;</span></Link>
           </div>
-
-          <ul className={styles.tags} aria-label="Highlights">
-            {tags.map((t) => (
-              <li key={t.label} className={`${styles.tag} ${t.tone}`}>
-                <span className={styles.tagIcon}>{t.icon}</span>
-                {t.label}
-              </li>
-            ))}
-          </ul>
-          <p className={styles.catalogNote}>
-            The backend catalog is still in development and may include
-            fictional sample grants. Verify opportunities with the funder.
-          </p>
+          <ul className={styles.tags} aria-label="CivicText features"><li>Grant discovery</li><li>Business improvement plans</li><li>No account needed</li></ul>
+          <p className={styles.fundingLink}>Prefer to browse? <Link to="/grants">Explore sample grant listings <span aria-hidden="true">&rarr;</span></Link></p>
         </div>
 
         <div className={styles.visual}>
-          <div className={styles.photoWrap}>
-            <img
-              className={styles.photo}
-              src="https://images.unsplash.com/photo-1611432579699-484f7990b127?auto=format&fit=crop&w=900&q=80"
-              alt="A smiling Black woman community organizer in a white top, photographed against a bright background"
-              loading="eager"
-            />
+          <div className={styles.plan}>
+            <div className={styles.planHeader}><span className={styles.planMark} aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M5 19V5m0 14h14M9 14l4-5 3 2 4-6M16 5h4v4" /></svg></span><div><p className={styles.planBrand}>Funding and ideas for your next step.</p><p className={styles.exampleLabel}>Example business needs · Flower shop</p></div><span className={styles.aiBadge}>CivicText</span></div>
+            <div className={styles.businessBrief}><p className={styles.smallLabel}>The starting point</p><p>&ldquo;I run a flower shop. I need funding for supplies and ideas to bring in more orders.&rdquo;</p><div className={styles.briefTags}><span>Funding for supplies</span><span>More weekday sales</span></div></div>
+            <div className={styles.planBody}>
+              <div className={styles.planHeading}><h2>Choose where to start.</h2></div>
+              <div className={styles.pathways}>
+                <Link to="/demo" className={styles.pathway}><span className={`${styles.actionNumber} ${styles.sage}`} aria-hidden="true">01</span><div><p className={styles.category}>Find grants</p><h3>Discover funding opportunities.</h3><p className={styles.actionDetail}>Describe what you need on Telegram. Get available grant matches, eligibility details, and application links.</p></div><span aria-hidden="true">↗</span></Link>
+                <Link to="/business-coach" className={styles.pathway}><span className={`${styles.actionNumber} ${styles.peach}`} aria-hidden="true">02</span><div><p className={styles.category}>Improve your business</p><h3>Make your next move a practical one.</h3><p className={styles.actionDetail}>Get sales, marketing, and operations ideas with a 30-day plan built around your business.</p></div><span aria-hidden="true">↗</span></Link>
+              </div>
+            </div>
+            <div className={styles.planFooter}><span className={styles.leaf} aria-hidden="true">✧</span><p>One business. One step at a time.</p><span aria-hidden="true">↗</span></div>
           </div>
-          <div className={styles.preview}>
-            <p className={styles.previewLabel}>A real request can be simple</p>
-            <p className={styles.previewMessage}>
-              &ldquo;I run a flower shop and need funding for pots.&rdquo;
-            </p>
-            <p className={styles.previewReply}>
-              CivicText searches its grant catalog and shares matching details
-              when available.
-            </p>
-          </div>
+          <p className={styles.exampleNote}>Grant searches happen on Telegram. Business plans are created here on the website.</p>
         </div>
       </div>
     </section>

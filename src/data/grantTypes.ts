@@ -1,5 +1,5 @@
 export const AUDIENCES = {
-  'black-owned': 'Black-owned business',
+  'black-owned': 'Business owner',
   'women-led': 'Women-led',
   youth: 'Youth-serving',
   'faith-based': 'Faith-based',

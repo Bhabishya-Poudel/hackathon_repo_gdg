@@ -14,7 +14,7 @@ function joinWords(items: string[]): string {
  * Plain text so it pastes cleanly into email, a form, or a Word doc.
  */
 const DESCRIPTORS: Record<string, string> = {
-  'black-owned': 'Black-led',
+  'black-owned': 'locally owned',
   'women-led': 'women-led',
   youth: 'youth-serving',
   'faith-based': 'faith-based',
