@@ -32,6 +32,7 @@ Embeddings use `BAAI/bge-small-en-v1.5` through FastEmbed and are stored locally
 
 - `backend/data/seed_grants.json`: curated grant records, including sample records where labeled.
 - `backend/data/listed_grants.json`: unverified third-party listings, when present; stored with source `listing`.
+- `backend/data/web_grants.json`: grants found by web research, stored with source `web`. Each record's `raw.verification` says whether it was confirmed on the funder's page (`official-page`), by several sources (`multiple-sources`), or from one aggregator listing (`aggregator-only`). `ingest --source web` adds more through Google-grounded search.
 - Grants.gov: federal opportunity records loaded through bulk extraction or keyword search.
 - `backend/data/grant_leads.md`: research leads excluded from ingestion.
 

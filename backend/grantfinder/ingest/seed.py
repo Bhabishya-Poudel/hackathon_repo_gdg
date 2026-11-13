@@ -1,5 +1,6 @@
 """Load hand-curated grants: data/seed_grants.json (verified or sample) and data/listed_grants.json
-(unverified third-party listings, stored with source "listing")."""
+(unverified third-party listings, stored with source "listing"), plus data/web_grants.json
+(web-research results, stored with source "web")."""
 from __future__ import annotations
 
 import json
@@ -18,5 +19,12 @@ def _load(path: Path, source: str) -> list[Grant]:
     return [Grant(source=source, **item) for item in json.loads(path.read_text())]
 
 
-def load_seed(path: Path = SEED_PATH, listed_path: Path = LISTED_PATH) -> list[Grant]:
-    return _load(path, "seed") + _load(listed_path, "listing")
+WEB_PATH = DATA_DIR / "web_grants.json"  # web-research results, source "web"; see raw.verification
+
+
+def load_web(path: Path = WEB_PATH) -> list[Grant]:
+    return _load(path, "web")
+
+
+def load_seed(path: Path = SEED_PATH, listed_path: Path = LISTED_PATH, web_path: Path = WEB_PATH) -> list[Grant]:
+    return _load(path, "seed") + _load(listed_path, "listing") + _load(web_path, "web")

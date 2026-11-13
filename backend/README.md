@@ -95,7 +95,20 @@ python -m grantfinder.cli stats
 python -m grantfinder.cli ask "flower pots and nursery plants"
 ```
 
-`--source seed` loads curated records and available third-party listings. `--source all` also downloads the Grants.gov bulk extract. The generated database, model cache, and downloaded extracts are excluded from version control. Repeating ingestion and indexing processes new or changed records.
+`--source seed` loads curated records, available third-party listings, and the web-research results in `data/web_grants.json`. `--source all` also downloads the Grants.gov bulk extract. The generated database, model cache, and downloaded extracts are excluded from version control. Repeating ingestion and indexing processes new or changed records.
+
+### Web search ingestion
+
+`--source web` searches the open web for grants (Gemini with Google Search grounding, using `LLM_API_KEY`), validates the results, and stores them with source `web`. It is not part of `--source all` because each run uses API quota.
+
+```bash
+python -m grantfinder.cli ingest --source web                        # topics from WEB_SEARCH_QUERIES in config.py
+python -m grantfinder.cli ingest --source web --query "grants for food trucks in Texas"
+python -m grantfinder.ingest.web_search --dry-run                    # print results, do not store
+python -m grantfinder.cli index                                      # embed the new grants afterwards
+```
+
+Expired grants and links that return 404/410 are dropped. Records are keyed by URL, so repeating a run updates rather than duplicates. Results come from a model reading live pages, so treat them as unverified leads, like `listing` records.
 
 ```bash
 python -m grantfinder.cli understand "I run a bakery in Georgia"

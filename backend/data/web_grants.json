@@ -1,0 +1,726 @@
+[
+  {
+    "external_id": "672ce672b997c4a0",
+    "title": "Shophand $5K Small Business Boost Grant",
+    "funder": "Shophand",
+    "url": "https://www.shophand.com/small-business-boost-grant",
+    "description": "Small business grant worth $5,000: $2,500 in unrestricted cash plus $2,500 in Shophand technical support and services. Apply through the Shophand Member Hub in about 10-15 minutes; winners announced December 15.",
+    "eligibility": "For-profit U.S. businesses that are actively operating (not just an idea), with fewer than 50 employees and under $5 million in annual revenue. Nonprofits are not eligible.",
+    "amount_min": 2500,
+    "amount_max": 5000,
+    "deadline": "2026-11-30",
+    "status": "open",
+    "categories": [
+      "small-business"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "Page lists round 2 deadline 'November 30' without a year; 2026 per aggregators.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "92756645127fff3c",
+    "title": "Tory Burch Foundation Fellows Program",
+    "funder": "Tory Burch Foundation",
+    "url": "https://www.toryburchfoundation.org/fellows/",
+    "description": "Fellowship for women entrepreneurs: a $2,000 education grant plus a year-long program of mentoring and support. Women-owned business owners apply online.",
+    "eligibility": "For-profit small business at least 51% owned and controlled by women, earning at least $75,000 a year, formed and operating in the U.S.; owner 21 or older.",
+    "amount_min": null,
+    "amount_max": 2000,
+    "deadline": "2026-11-17",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "women-owned"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "Official page gives deadline Nov 17, 2026; the $2,000 figure comes from a roundup, not the official page.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "2852e7452c0f9302",
+    "title": "Hiring Our Heroes Small Business Grant Program (2027)",
+    "funder": "U.S. Chamber of Commerce Foundation, Hiring Our Heroes",
+    "url": "https://www.hiringourheroes.org/small-business-grant/rules/",
+    "description": "Five grants for veteran-owned and military spouse-owned small businesses: four winners get $10,000 each and one grand prize winner gets $25,000. No entry fee.",
+    "eligibility": "Veteran- or military spouse-owned for-profit business (owner holds 51%+), 3 to 20 employees, under $5 million revenue, in a distressed-community zip code or showing financial need.",
+    "amount_min": 10000,
+    "amount_max": 25000,
+    "deadline": "2026-12-15",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "veteran"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "Entry deadline 11:59 pm EDT Dec 15, 2026; winners notified by March 29, 2027.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "935b35d57854e52f",
+    "title": "Hustler's MicroGrant",
+    "funder": "HerSuiteSpot",
+    "url": "https://www.hersuitespot.com/hustlersgrant/",
+    "description": "$1,000 microgrant awarded every month to small business owners and entrepreneurs in the U.S. who are building, growing or stabilizing a business. $15 nonrefundable application fee.",
+    "eligibility": "Small business owners and entrepreneurs in the United States with a clear plan for how the grant would help; U.S. mailing address required.",
+    "amount_min": null,
+    "amount_max": 1000,
+    "deadline": null,
+    "status": "open",
+    "categories": [
+      "small-business",
+      "microgrant"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "Rolling; no closing date published.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "7df68c2a1ac4eef2",
+    "title": "The Hopper Prize Fall 2026 Artist Grants",
+    "funder": "The Hopper Prize",
+    "url": "https://hopperprize.org/",
+    "description": "Unrestricted grants for visual artists: two $4,500 grants and four $1,000 grants, any medium. $40 submission fee.",
+    "eligibility": "Visual artists aged 18 or older working in any media.",
+    "amount_min": 1000,
+    "amount_max": 4500,
+    "deadline": "2026-11-17",
+    "status": "open",
+    "categories": [
+      "arts",
+      "artist"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "For individual artists, not businesses. Deadline Nov 17, 11:59 pm PST (year not printed on page; 2026 per 4Culture listing).",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "2ff0c33412f7a0a7",
+    "title": "Small Business Facade Improvement Program (Richmond, CA)",
+    "funder": "City of Richmond, California",
+    "url": "https://richmondca.gov/4648",
+    "description": "Grants of up to $15,000 per address for storefront exterior improvements (windows, doors, awnings, signage, painting, lighting) for retail and public-facing small businesses in Iron Triangle, Santa Fe or Coronado.",
+    "eligibility": "Retail and public-facing businesses and nonprofits in ground-floor street-facing space, or owners of vacant storefronts, in those Richmond neighborhoods; 2024 revenue $2 million or less; active city business license.",
+    "amount_min": null,
+    "amount_max": 15000,
+    "deadline": "2026-12-31",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "storefront"
+    ],
+    "states": [
+      "CA"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "City page (updated June 25, 2026): accepting applications through December 2026 or until funds run out; requests exceed the $300,000 pool, new applications may be waitlisted.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "063bac8b412e7abb",
+    "title": "Amber Grant for Women",
+    "funder": "WomensNet",
+    "url": "https://ambergrantsforwomen.com/",
+    "description": "Monthly $15,000 grant for woman-owned businesses, plus a $75,000 year-end grant. Women business owners in any category can apply.",
+    "eligibility": "Woman-owned business in any category; the page says nonprofits are also eligible.",
+    "amount_min": null,
+    "amount_max": 15000,
+    "deadline": null,
+    "status": "open",
+    "categories": [
+      "small-business",
+      "women-owned"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "Rolling monthly; the page states no cutoff date, fee or open/closed status, and is inconsistent on number of monthly winners.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "99e6cf5e2928a99b",
+    "title": "Columbia County Microenterprise Grant (NY)",
+    "funder": "Columbia Economic Development Corporation",
+    "url": "https://columbiaedc.com/grow-here/microenterprise",
+    "description": "Grant of up to $20,000 for very small businesses in Columbia County, New York. Owners complete a four-session training program.",
+    "eligibility": "Columbia County, NY businesses with five or fewer employees (including owners) that commit to creating at least one job for a low- to moderate-income person; credit score of 600+ (exceptions possible).",
+    "amount_min": null,
+    "amount_max": 20000,
+    "deadline": "2026-12-15",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "microenterprise"
+    ],
+    "states": [
+      "NY"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "Deadline Dec 15, 2026 per CEDC page.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "41e52d00221e1104",
+    "title": "Vermont Working Lands Business Enhancement Grant",
+    "funder": "Vermont Working Lands Enterprise Initiative",
+    "url": "https://workinglands.vermont.gov/businessgrants",
+    "description": "Grants of $10,000 to $50,000, no match required, for Vermont farm, food, forestry and wood-products businesses to grow. Decisions late Feb or early March 2027.",
+    "eligibility": "Vermont farms producing food or fiber, forestry businesses using Vermont-grown wood, and certain agricultural trucking, distribution and retail businesses with at least one year of operating history. Cannabis, flowers, horticulture and indoor-only growers are excluded.",
+    "amount_min": 10000,
+    "amount_max": 50000,
+    "deadline": "2026-12-10",
+    "status": "open",
+    "categories": [
+      "agriculture",
+      "farm",
+      "food"
+    ],
+    "states": [
+      "VT"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "Window Oct 9 - Dec 10, 2026, 2:00 pm.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "d7615bbe7ced65b7",
+    "title": "USDA Organic Certification Cost Share Program (OCCSP)",
+    "funder": "USDA Farm Service Agency",
+    "url": "https://www.fsa.usda.gov/resources/income-support/organic-certification-cost-share-program-occsp",
+    "description": "Reimburses certified organic farms, producers and handlers for part of their organic certification costs. Apply through your local FSA service center.",
+    "eligibility": "USDA-certified organic producers and handlers (farm businesses); needs proof of certification and itemized invoices.",
+    "amount_min": null,
+    "amount_max": 750,
+    "deadline": "2026-12-31",
+    "status": "open",
+    "categories": [
+      "agriculture",
+      "farm",
+      "organic"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "Deadline Dec 31, 2026 for program years 2025 and 2026 (FSA via search summary; official page fetch timed out). $750 cap per scope is from an aggregator.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "378ec4f4d2a4257d",
+    "title": "Verizon Small Business Digital Ready $10,000 Grants",
+    "funder": "Verizon (via LISC and Hello Alice)",
+    "url": "https://app.helloalice.com/offers/verizon-digital-ready-10k-small-business-grant",
+    "description": "$10,000 small business grants from Verizon. Complete two Digital Ready courses or events to unlock the application; apply once to stay eligible for the year.",
+    "eligibility": "U.S. small business owners who first finish two Verizon Digital Ready courses or events.",
+    "amount_min": null,
+    "amount_max": 10000,
+    "deadline": null,
+    "status": "open",
+    "categories": [
+      "small-business",
+      "digital"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "official-page",
+      "note": "Sources conflict: rolling for 2026 vs deadlines of Dec 1 or Dec 7, 2026. Check before applying.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "0318fe9ca580d94b",
+    "title": "North Dakota APUC Value-Added Agriculture Grant",
+    "funder": "North Dakota Department of Agriculture (APUC)",
+    "url": "https://ambrook.com/funding/north-dakota-apuc-grants",
+    "description": "State grants for North Dakota companies that add value to North Dakota farm products. Quarterly application deadlines.",
+    "eligibility": "North Dakota companies and farm businesses that add value to North Dakota agriculture.",
+    "amount_min": null,
+    "amount_max": null,
+    "deadline": "2027-01-01",
+    "status": "open",
+    "categories": [
+      "agriculture",
+      "farm",
+      "food"
+    ],
+    "states": [
+      "ND"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "multiple-sources",
+      "note": "Ambrook and Atom Grants agree on Jan 1, 2027; the two list different quarterly schedules.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "e076e50c16a4a59e",
+    "title": "Missouri MASBDA Farm to Table Value-Added Grant",
+    "funder": "Missouri Agricultural and Small Business Development Authority",
+    "url": "https://agriculture.mo.gov/abd/financial/farmtotable.php",
+    "description": "Missouri value-added agriculture grant program run by MASBDA, for projects that add value to Missouri farm products.",
+    "eligibility": "Missouri agriculture projects and small businesses; see the MASBDA guidelines for exact eligibility.",
+    "amount_min": null,
+    "amount_max": null,
+    "deadline": "2026-12-15",
+    "status": "open",
+    "categories": [
+      "agriculture",
+      "farm",
+      "food"
+    ],
+    "states": [
+      "MO"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "multiple-sources",
+      "note": "Dec 15, 2026, 3 pm from two aggregator listings (Atom Grants, GrantCompass); not on the official page I could read.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "3efadb1d2c4dc69d",
+    "title": "The Flagship Fund Microgrants (Erie, PA)",
+    "funder": "City of Erie, Pennsylvania",
+    "url": "https://cityof.erie.pa.us/?p=2745",
+    "description": "Microgrants of up to $5,000 with a 1:1 match for Erie small businesses and entrepreneurs: marketing, building improvements, equipment, computer hardware or software and connectivity. Awarded in competitive application rounds.",
+    "eligibility": "Small businesses and entrepreneurs in the City of Erie; businesses that got a Flagship grant in the last three years are excluded.",
+    "amount_min": null,
+    "amount_max": 5000,
+    "deadline": null,
+    "status": "forecasted",
+    "categories": [
+      "small-business",
+      "microgrant"
+    ],
+    "states": [
+      "PA"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "multiple-sources",
+      "note": "Program is real and recurring, but no 2026 application window was confirmed; 2025 round awarded 39 businesses.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "43b545e5a7989330",
+    "title": "Chicago Small Business Improvement Fund (SBIF)",
+    "funder": "City of Chicago Department of Planning and Development",
+    "url": "https://somercor.com/sbif/",
+    "description": "Reimbursement grants for permanent building improvements and repairs to a business property in an open Chicago TIF district. Industrial businesses with 200 or fewer employees can get 50% of project costs.",
+    "eligibility": "Owners and tenants of qualifying commercial or industrial property in a Chicago TIF district that is currently open for applications.",
+    "amount_min": null,
+    "amount_max": null,
+    "deadline": null,
+    "status": "open",
+    "categories": [
+      "small-business",
+      "storefront"
+    ],
+    "states": [
+      "IL"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "multiple-sources",
+      "note": "Windows open district by district through 2026; maximum award not confirmed. Apply via SomerCor; see chicago.gov/sbif calendar.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "48a870dd8b520dd0",
+    "title": "Secretsos Small Business Grant",
+    "funder": "Secretsos Foundation",
+    "url": "https://grantcompass.co/grants/secretsos-small-business-grant",
+    "description": "Quarterly $2,500 grant for small businesses owned by women, veterans or minorities, or businesses that were turned down for a bank loan.",
+    "eligibility": "U.S. small business owners who are women-, veteran- or minority-owned, or were denied a bank loan.",
+    "amount_min": null,
+    "amount_max": 2500,
+    "deadline": "2026-12-31",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "women-owned",
+      "veteran",
+      "minority-owned"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "multiple-sources",
+      "note": "Deadline Dec 31, 2026 per GrantCompass; a second roundup agrees. Official page not read.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "6fcebd570ac8bc4b",
+    "title": "Business Freedom Grant",
+    "funder": "Darcy's Business",
+    "url": "https://grantcompass.co/grants/business-freedom-grant",
+    "description": "$1,000 grant for small business owners and idea-stage founders. No entry fee.",
+    "eligibility": "Any U.S. business owner or founder; idea stage welcome.",
+    "amount_min": null,
+    "amount_max": 1000,
+    "deadline": "2026-12-31",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "startup"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "multiple-sources",
+      "note": "Deadline Dec 31, 2026 (an interim round closes Nov 15, 2026). Two roundups agree; official page not read.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "0c030b6a8e5821e5",
+    "title": "Outta Excuses Small Business Empowerment Grant",
+    "funder": "Outta Excuses",
+    "url": "https://grantcompass.co/grants/outta-excuses-small-business-empowerment-grant",
+    "description": "$3,000 grant per round for small businesses. $15 entry fee.",
+    "eligibility": "Registered LLC with under $500,000 in annual revenue.",
+    "amount_min": null,
+    "amount_max": 3000,
+    "deadline": "2026-12-31",
+    "status": "open",
+    "categories": [
+      "small-business"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Deadline Dec 31, 2026, 11:59 pm EST.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "075b33a244fbc84a",
+    "title": "IFW Startup Accelerator Grant",
+    "funder": "IFW",
+    "url": "https://grantcompass.co/grants/ifw-startup-accelerator-grant",
+    "description": "$5,000 grant for one winning startup or small business. $5 entry fee; idea-stage founders welcome.",
+    "eligibility": "Any U.S. business owner holding 50% or more of a business; idea stage welcome.",
+    "amount_min": null,
+    "amount_max": 5000,
+    "deadline": "2026-11-30",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "startup"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Deadline Nov 30, 2026.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "352c081af2aff1cd",
+    "title": "Coach K Legacy Grant",
+    "funder": "Coach K LLC",
+    "url": "https://grantcompass.co/grants/coach-k-legacy-grant",
+    "description": "Monthly $1,000 grant for small business owners.",
+    "eligibility": "U.S. small business owners.",
+    "amount_min": null,
+    "amount_max": 1000,
+    "deadline": "2026-11-28",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "microgrant"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Current round closes Nov 28, 2026, 11:59 pm ET.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "aa37ebd39eb64779",
+    "title": "Freed Fellowship Grant",
+    "funder": "The Freed Studio",
+    "url": "https://grantcompass.co/grants/freed-fellowship-grant",
+    "description": "$500 each month plus a $2,500 year-end award for U.S. for-profit small businesses.",
+    "eligibility": "Any U.S. for-profit business.",
+    "amount_min": 500,
+    "amount_max": 2500,
+    "deadline": null,
+    "status": "open",
+    "categories": [
+      "small-business",
+      "microgrant"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Monthly rolling; applications close the last day of each month.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "e6006b1b6ed4f91b",
+    "title": "NASE Growth Grant",
+    "funder": "National Association for the Self-Employed",
+    "url": "https://grantcompass.co/grants/nase-growth-grant",
+    "description": "Grants of up to $4,000 for self-employed people and micro-business owners to grow their business, reviewed quarterly.",
+    "eligibility": "NASE members only (self-employed individuals and micro-businesses).",
+    "amount_min": null,
+    "amount_max": 4000,
+    "deadline": null,
+    "status": "open",
+    "categories": [
+      "small-business",
+      "self-employed"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Rolling; reviewed in Jan, Apr, Jul and Oct.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "2bef69306f4715cd",
+    "title": "Awesome Foundation Micro-Grant",
+    "funder": "The Awesome Foundation",
+    "url": "https://grantcompass.co/grants/awesome-foundation-micro-grant",
+    "description": "$1,000 no-strings micro-grants, usually monthly, for community projects, creative projects and local initiatives. No entry fee.",
+    "eligibility": "Anyone with a community or creative project; not limited to businesses.",
+    "amount_min": null,
+    "amount_max": 1000,
+    "deadline": null,
+    "status": "open",
+    "categories": [
+      "community",
+      "arts",
+      "microgrant"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Rolling; most local chapters choose monthly.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "03cc13e9ad33987f",
+    "title": "Black Women Photographers x Nikon Grant",
+    "funder": "Black Women Photographers and Nikon",
+    "url": "https://grantcompass.co/grants/black-women-photographers-nikon-grant",
+    "description": "Grant of $2,500 cash plus a Nikon Z6III camera kit for Black women photographers.",
+    "eligibility": "Aimed at Black women photographers (per the program name); check the official rules.",
+    "amount_min": null,
+    "amount_max": 2500,
+    "deadline": "2026-11-20",
+    "status": "open",
+    "categories": [
+      "arts",
+      "photography",
+      "creative"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Deadline Nov 20, 2026.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "2d620b2d5c547405",
+    "title": "Seated Together Small Business Microgrant",
+    "funder": "Seated Together",
+    "url": "https://grantcompass.co/grants/seated-together-small-business-microgrant",
+    "description": "Microgrant of $750 ($1,000 for veteran-owned businesses) for U.S. for-profit small businesses, reviewed quarterly. $5 entry fee.",
+    "eligibility": "Any U.S. for-profit business; veteran-owned businesses receive a higher amount.",
+    "amount_min": 750,
+    "amount_max": 1000,
+    "deadline": null,
+    "status": "open",
+    "categories": [
+      "small-business",
+      "microgrant",
+      "veteran"
+    ],
+    "states": [],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Rolling, reviewed quarterly.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "b2a0775e1e24bea4",
+    "title": "Montana Tribal Tourism Small Business Grant",
+    "funder": "Montana Department of Commerce",
+    "url": "https://grantcompass.co/grants/montana-tribal-tourism-small-business-grant",
+    "description": "State grant to promote tribal tourism: small business products and projects run by Montana tribal tourism businesses. Needs a 10% cash match above $25,000.",
+    "eligibility": "Individuals and businesses representing a Montana tribal tourism business.",
+    "amount_min": null,
+    "amount_max": null,
+    "deadline": "2026-11-30",
+    "status": "open",
+    "categories": [
+      "tourism",
+      "native-american",
+      "small-business"
+    ],
+    "states": [
+      "MT"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "Amounts conflict: up to $30,000 (GrantCompass) vs up to $10,000 (older GrantWatch listing). Deadline Nov 30, 2026.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "0198c284e4e82e86",
+    "title": "Tampa Entrepreneur Support Hub Microgrant",
+    "funder": "City of Tampa",
+    "url": "https://grantcompass.co/grants/tampa-entrepreneur-support-hub-microgrant",
+    "description": "Microgrants of $1,500 to $3,000 for Tampa entrepreneurs and small businesses; referral-based through the entrepreneur support hub.",
+    "eligibility": "Tampa, Florida small businesses and entrepreneurs, referred through the city's support hub.",
+    "amount_min": 1500,
+    "amount_max": 3000,
+    "deadline": "2027-02-15",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "microgrant"
+    ],
+    "states": [
+      "FL"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Listed deadline Feb 15, 2027.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "5a8a70e9a5260bb6",
+    "title": "Colorado CGBN Efficiency Grant",
+    "funder": "Colorado Department of Public Health and Environment",
+    "url": "https://grantcompass.co/grants/colorado-cgbn-efficiency-grant",
+    "description": "Grants of $1,500 to $4,500 for Colorado small businesses to pay for energy and resource efficiency upgrades, depending on the business's EnviroScreen score.",
+    "eligibility": "Colorado small businesses, with higher amounts for businesses in disproportionately impacted areas.",
+    "amount_min": 1500,
+    "amount_max": 4500,
+    "deadline": "2027-05-01",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "environment",
+      "energy"
+    ],
+    "states": [
+      "CO"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. Listed deadline May 1, 2027.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "b5cf2a150c899f24",
+    "title": "Idaho Employer Training Grant",
+    "funder": "Idaho Workforce Development Council",
+    "url": "https://grantcompass.co/grants/id-workforce-development-employer-grant",
+    "description": "Grants of up to $500,000 for Idaho employers to train workers and upskill employees.",
+    "eligibility": "Idaho businesses and employers training their workforce.",
+    "amount_min": null,
+    "amount_max": 500000,
+    "deadline": "2026-12-04",
+    "status": "open",
+    "categories": [
+      "workforce",
+      "training",
+      "small-business"
+    ],
+    "states": [
+      "ID"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass and a second roundup. Deadline Dec 4, 2026, 5 pm MT.",
+      "sources": []
+    }
+  },
+  {
+    "external_id": "8e2d8921f9179069",
+    "title": "Global NY STEP Export Grant",
+    "funder": "Empire State Development",
+    "url": "https://grantcompass.co/grants/ny-global-step-export-grant",
+    "description": "Reimbursement grants of $2,000 to $5,000 per activity for New York small businesses that want to start or grow exporting: trade shows, international marketing and translation.",
+    "eligibility": "New York small businesses new to exporting or expanding exports.",
+    "amount_min": 2000,
+    "amount_max": 5000,
+    "deadline": "2027-09-29",
+    "status": "open",
+    "categories": [
+      "small-business",
+      "export"
+    ],
+    "states": [
+      "NY"
+    ],
+    "raw": {
+      "researched": "2026-11-13",
+      "verification": "aggregator-only",
+      "note": "GrantCompass only. First-come until funds committed; listed through Sept 29, 2027.",
+      "sources": []
+    }
+  }
+]
